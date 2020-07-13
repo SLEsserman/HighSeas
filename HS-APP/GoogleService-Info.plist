@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>360036431947-jblmm2hrlf3tqiqag4utrnndovsl4qeq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.360036431947-jblmm2hrlf3tqiqag4utrnndovsl4qeq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBnA2gOEMlTrdl3HsH9keiYsTn2kf21m_M</string>
+	<key>GCM_SENDER_ID</key>
+	<string>360036431947</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.samuelesserman.HS-APP</string>
+	<key>PROJECT_ID</key>
+	<string>highseas-gallery-artwork</string>
+	<key>STORAGE_BUCKET</key>
+	<string>highseas-gallery-artwork.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:360036431947:ios:a146b86de38e97fbd775ce</string>
+	<key>DATABASE_URL</key>
+	<string>https://highseas-gallery-artwork.firebaseio.com</string>
+</dict>
+</plist>

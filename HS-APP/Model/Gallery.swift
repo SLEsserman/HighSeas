@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct GalleryItem {
+struct GalleryItem: Decodable, Hashable {
     let title: String
     let imageUrl: String
 }

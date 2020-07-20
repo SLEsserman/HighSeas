@@ -21,7 +21,7 @@ let price: String
 let images: [ProductImage]
 }
 
-struct ProductImage: Decodable {
+struct ProductImage: Decodable, Hashable {
 let id: Int
 let src: String
 let name: String

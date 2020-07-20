@@ -14,6 +14,12 @@ class HomePageHeaderCell: UICollectionViewCell {
 //    let companyLabel = UILabel(
 //        text: "HighSeas",
 //        font: .boldSystemFont(ofSize: 12))
+    var product: GalleryItem! {
+           didSet {
+                titleLabel.text = product.title
+                imageView.sd_setImage(with: URL(string: product.imageUrl))
+           }
+    }
     
     let titleLabel = UILabel(
         text: "Don't settle down and sit in one place. Move around, be nomadic, make each day a new horizon",

@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct ProductsToFocusOn {
+struct ProductsToFocusOn: Decodable, Hashable {
     let id: Int
     let name, imageURL, categories: String
 }

@@ -35,6 +35,7 @@
 		25729F06246EF1C300B710C3 /* HomeHeaderHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25729F05246EF1C300B710C3 /* HomeHeaderHorizontalController.swift */; };
 		257BEE6224A0F8F6005C39AD /* HomePageDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257BEE6124A0F8F6005C39AD /* HomePageDetailCell.swift */; };
 		257BEE6424A0FE76005C39AD /* PreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257BEE6324A0FE76005C39AD /* PreviewCell.swift */; };
+		258CDA6924C5E00A0014120D /* HomePageCompositionalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258CDA6824C5E00A0014120D /* HomePageCompositionalController.swift */; };
 		25BC8324248539170017E47F /* HomePageHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC8323248539170017E47F /* HomePageHeader.swift */; };
 		25BC832724853BD60017E47F /* HomePagePreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC832624853BD60017E47F /* HomePagePreviewCell.swift */; };
 		25BC832924853CFC0017E47F /* PreviewScreenShotController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BC832824853CFC0017E47F /* PreviewScreenShotController.swift */; };
@@ -74,6 +75,7 @@
 		25729F05246EF1C300B710C3 /* HomeHeaderHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderHorizontalController.swift; sourceTree = "<group>"; };
 		257BEE6124A0F8F6005C39AD /* HomePageDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageDetailCell.swift; sourceTree = "<group>"; };
 		257BEE6324A0FE76005C39AD /* PreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewCell.swift; sourceTree = "<group>"; };
+		258CDA6824C5E00A0014120D /* HomePageCompositionalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageCompositionalController.swift; sourceTree = "<group>"; };
 		25BC8323248539170017E47F /* HomePageHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageHeader.swift; sourceTree = "<group>"; };
 		25BC832624853BD60017E47F /* HomePagePreviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePagePreviewCell.swift; sourceTree = "<group>"; };
 		25BC832824853CFC0017E47F /* PreviewScreenShotController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewScreenShotController.swift; sourceTree = "<group>"; };
@@ -118,7 +120,6 @@
 			children = (
 				25729ED4246EE8D900B710C3 /* HS-APP */,
 				25729ED3246EE8D900B710C3 /* Products */,
-				250BA4132497C27000CEF6A1 /* HTMLConverter.swift */,
 				2F5F1EE81A0F44F69BD9BBA0 /* Pods */,
 				9F588B0F115239FF4AAB9049 /* Frameworks */,
 			);
@@ -192,6 +193,7 @@
 		25729EFC246EEF8A00B710C3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				250BA4132497C27000CEF6A1 /* HTMLConverter.swift */,
 				250DB9CF247EC1E6009114DB /* Notes 5.27.swift */,
 				25729ED5246EE8D900B710C3 /* AppDelegate.swift */,
 				25729ED7246EE8D900B710C3 /* SceneDelegate.swift */,
@@ -204,6 +206,7 @@
 		25729EFF246EF04300B710C3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				258CDA6724C5DFE00014120D /* Compositional */,
 				25729F00246EF04700B710C3 /* HomePageViews */,
 				25005AA8247ECD1F002F50DE /* SearchResultCell.swift */,
 			);
@@ -220,6 +223,14 @@
 				25BC8323248539170017E47F /* HomePageHeader.swift */,
 			);
 			path = HomePageViews;
+			sourceTree = "<group>";
+		};
+		258CDA6724C5DFE00014120D /* Compositional */ = {
+			isa = PBXGroup;
+			children = (
+				258CDA6824C5E00A0014120D /* HomePageCompositionalController.swift */,
+			);
+			path = Compositional;
 			sourceTree = "<group>";
 		};
 		25BC832524853BC30017E47F /* Details */ = {
@@ -389,6 +400,7 @@
 				25729ED6246EE8D900B710C3 /* AppDelegate.swift in Sources */,
 				250DB9D4247EC486009114DB /* HomePageHeaderCell.swift in Sources */,
 				257BEE6224A0F8F6005C39AD /* HomePageDetailCell.swift in Sources */,
+				258CDA6924C5E00A0014120D /* HomePageCompositionalController.swift in Sources */,
 				257BEE6424A0FE76005C39AD /* PreviewCell.swift in Sources */,
 				25675255248546B70028C789 /* Category.swift in Sources */,
 				254519E72481558800A363F3 /* HomePageRowCell.swift in Sources */,

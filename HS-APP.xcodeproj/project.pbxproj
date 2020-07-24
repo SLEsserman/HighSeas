@@ -16,6 +16,7 @@
 		250BA4142497C27000CEF6A1 /* HTMLConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250BA4132497C27000CEF6A1 /* HTMLConverter.swift */; };
 		250DB9D0247EC1E6009114DB /* Notes 5.27.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DB9CF247EC1E6009114DB /* Notes 5.27.swift */; };
 		250DB9D4247EC486009114DB /* HomePageHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250DB9D3247EC486009114DB /* HomePageHeaderCell.swift */; };
+		251BCC9424CB294100722EA2 /* HomePageFullScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 251BCC9324CB294100722EA2 /* HomePageFullScreenController.swift */; };
 		254519E32481545900A363F3 /* HomePageGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254519E22481545900A363F3 /* HomePageGroupCell.swift */; };
 		254519E52481550300A363F3 /* HomePageHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254519E42481550300A363F3 /* HomePageHorizontalController.swift */; };
 		254519E72481558800A363F3 /* HomePageRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254519E62481558800A363F3 /* HomePageRowCell.swift */; };
@@ -54,6 +55,7 @@
 		250BA4132497C27000CEF6A1 /* HTMLConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLConverter.swift; sourceTree = "<group>"; };
 		250DB9CF247EC1E6009114DB /* Notes 5.27.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notes 5.27.swift"; sourceTree = "<group>"; };
 		250DB9D3247EC486009114DB /* HomePageHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageHeaderCell.swift; sourceTree = "<group>"; };
+		251BCC9324CB294100722EA2 /* HomePageFullScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageFullScreenController.swift; sourceTree = "<group>"; };
 		254519E22481545900A363F3 /* HomePageGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageGroupCell.swift; sourceTree = "<group>"; };
 		254519E42481550300A363F3 /* HomePageHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageHorizontalController.swift; sourceTree = "<group>"; };
 		254519E62481558800A363F3 /* HomePageRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageRowCell.swift; sourceTree = "<group>"; };
@@ -115,6 +117,14 @@
 			path = Details;
 			sourceTree = "<group>";
 		};
+		251BCC9224CB291C00722EA2 /* FullScreenController */ = {
+			isa = PBXGroup;
+			children = (
+				251BCC9324CB294100722EA2 /* HomePageFullScreenController.swift */,
+			);
+			path = FullScreenController;
+			sourceTree = "<group>";
+		};
 		25729EC9246EE8D900B710C3 = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +180,7 @@
 		25729EF0246EECFA00B710C3 /* HomePageControllers */ = {
 			isa = PBXGroup;
 			children = (
+				251BCC9224CB291C00722EA2 /* FullScreenController */,
 				25005AA5247ECC44002F50DE /* Details */,
 				25729EEE246EECAF00B710C3 /* HomePageController.swift */,
 				25729EFD246EEFF100B710C3 /* HorizontalSnappingController.swift */,
@@ -396,6 +407,7 @@
 			files = (
 				25729EF2246EED1000B710C3 /* BaseListController.swift in Sources */,
 				25BC832924853CFC0017E47F /* PreviewScreenShotController.swift in Sources */,
+				251BCC9424CB294100722EA2 /* HomePageFullScreenController.swift in Sources */,
 				25005AA4247ECB17002F50DE /* ProductSearchController.swift in Sources */,
 				25729ED6246EE8D900B710C3 /* AppDelegate.swift in Sources */,
 				250DB9D4247EC486009114DB /* HomePageHeaderCell.swift in Sources */,

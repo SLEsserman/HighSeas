@@ -187,8 +187,26 @@ class HomePageCompositionalController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let object = diffableDataSource.itemIdentifier(for: indexPath)
         if let object = object as? GalleryItem {
-            let homePageDetailController = HomePageDetailController(appId: object.)
+            let homePageDetailController = HomePageDetailController(appId: object.title)
+            
+            navigationController?.pushViewController(homePageDetailController, animated: true)
         }
+    }
+    
+    
+    private func setupDiffableDataSource() {
+        
+        collectionView.dataSource = diffableDataSource
+        
+        diffableDataSource.supplementaryViewProvider = .some({ (collectionView, kind, indexPath) -> UICollectionReusableView? in
+            
+            let snapshot = self.diffableDataSource.snapshot()
+            if let object = self.diffableDataSource.itemIdentifier(for: indexPath) {
+                if let section = snapshot.sectionIdentifiers(containingItem: object) {
+                    
+                }
+            }
+        })
     }
     
 }

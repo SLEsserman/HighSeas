@@ -15,7 +15,7 @@ class HSTabBarController: UITabBarController {
         
         
         viewControllers = [
-            createNavController(viewController: HomePageController(), title: "Home Page", imageName: "apps"),
+            createNavController(viewController: HomePageCompositionalController(), title: "Home Page", imageName: "apps"),
             createNavController(viewController: UIViewController(), title: "Collection-Detail", imageName: "search"),
             createNavController(viewController: UIViewController(), title: "Media", imageName: "today_icon"),
         ]

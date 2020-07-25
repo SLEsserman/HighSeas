@@ -13,7 +13,7 @@ let product: [Product]
 
 }
 
-struct Product: Decodable {
+struct Product: Decodable, Hashable {
 let id: Int
 let name: String
 let short_description: String

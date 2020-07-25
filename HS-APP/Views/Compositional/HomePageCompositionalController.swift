@@ -127,12 +127,6 @@ class HomePageCompositionalController: UICollectionViewController {
         navigationItem.title                                        = "Home Page"
         navigationController?.navigationBar.prefersLargeTitles      = true
 
-        navigationItem.rightBarButtonItem = .init(
-            title: "Fetch Collections",
-            style: .plain,
-            target: self,
-            action: #selector(handleFetchCollection))
-
         collectionView.refreshControl = UIRefreshControl()
         collectionView.refreshControl?.addTarget(
             self,
@@ -146,6 +140,10 @@ class HomePageCompositionalController: UICollectionViewController {
         collectionView.refreshControl?.endRefreshing()
 
         var snapshot = diffableDataSource.snapshot()
+        
+        snapshot.deleteSections([.productItems])
+        
+        diffableDataSource.apply(snapshot)
     }
 
 
@@ -200,15 +198,55 @@ class HomePageCompositionalController: UICollectionViewController {
         
         diffableDataSource.supplementaryViewProvider = .some({ (collectionView, kind, indexPath) -> UICollectionReusableView? in
             
+            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: self.headerId, for: indexPath) as! CompositionalHeader
+            
             let snapshot = self.diffableDataSource.snapshot()
             if let object = self.diffableDataSource.itemIdentifier(for: indexPath) {
-                if let section = snapshot.sectionIdentifiers(containingItem: object) {
-                    
+                if let section = snapshot.sectionIdentifier(containingItem: object) {
+                    if section == .productItems {
+                        header.label.text = "PRODUCTS"
+                    }
                 }
             }
+            return header
         })
+        
+        Service.shared.fetchAllProducts { (products, err) in
+            Service.shared.fetchGallery { (galleryItems, err) in
+           
+            
+                var snapshot = self.diffableDataSource.snapshot()
+                
+                snapshot.appendSections([.galleryItems, .productItems])
+                snapshot.appendItems(galleryItems ?? [], toSection: .galleryItems)
+                snapshot.appendItems(products ?? [], toSection: .productItems)
+                
+                self.diffableDataSource.apply(snapshot)
+            }
+            
+        }
     }
-    
 }
 
 
+struct HomePageViews: UIViewControllerRepresentable {
+    
+    func makeUIViewController(context: Context) -> UIViewController {
+        let controller = HomePageCompositionalController()
+        return UINavigationController(rootViewController: controller)
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        
+    }
+    
+    typealias UIViewControllerType = UIViewController
+}
+
+
+struct HomePageCompositionalView_Preview: PreviewProvider {
+    static var previews: some View {
+        HomePageViews()
+            .edgesIgnoringSafeArea(.all)
+    }
+}

@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-class HomePageCompositionalController: UICollectionViewController {
+class HomePageCompositionalController: UICollectionViewController { 
 
     init() {
         let layout = UICollectionViewCompositionalLayout { (sectionNumber, _) -> NSCollectionLayoutSection? in
@@ -155,8 +155,13 @@ class HomePageCompositionalController: UICollectionViewController {
     lazy var diffableDataSource: UICollectionViewDiffableDataSource<HomePageSection, AnyHashable> = .init(collectionView: self.collectionView) { (collectionView, indexPath, object) -> UICollectionViewCell? in
 
         if let object = object as? GalleryItem {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "smallCellId", for: indexPath) as! HomePageHeaderCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! HomePageHeaderCell
             cell.product = object
+            return cell
+        } else if let object = object as? Product {
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "smallCellID", for: indexPath) as! HomePageRowCell
+            //cell.categoryLabel =
+            
             return cell
         }
         return nil
@@ -188,6 +193,10 @@ class HomePageCompositionalController: UICollectionViewController {
             let homePageDetailController = HomePageDetailController(appId: object.title)
             
             navigationController?.pushViewController(homePageDetailController, animated: true)
+        } else if let object = object as? Product {
+            let homePageDetailController = HomePageDetailController(appId: object.name)
+            
+            navigationController?.pushViewController(homePageDetailController, animated: true)
         }
     }
     
@@ -205,6 +214,8 @@ class HomePageCompositionalController: UICollectionViewController {
                 if let section = snapshot.sectionIdentifier(containingItem: object) {
                     if section == .productItems {
                         header.label.text = "PRODUCTS"
+                    } else if section == .galleryItems {
+                        header.label.text = "Gallery"
                     }
                 }
             }
@@ -219,7 +230,7 @@ class HomePageCompositionalController: UICollectionViewController {
                 
                 snapshot.appendSections([.galleryItems, .productItems])
                 snapshot.appendItems(galleryItems ?? [], toSection: .galleryItems)
-                snapshot.appendItems(products ?? [], toSection: .productItems)
+                //snapshot.appendItems(products ?? [], toSection: .productItems)
                 
                 self.diffableDataSource.apply(snapshot)
             }
